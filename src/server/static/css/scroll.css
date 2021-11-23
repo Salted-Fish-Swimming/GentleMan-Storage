@@ -1,0 +1,57 @@
+.scroll-content {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  transition: top 0.5s;
+}
+
+.scroll-bar {
+  z-index: 10;
+  position: absolute;
+  width: 10px;
+  height: 10%;
+  right: 3px;
+  background-color: rgba(218, 218, 218, 0);
+  transition-property: top, background-color;
+  transition-duration: 0.7s, 0.3s;
+}
+
+.scroll-orbit {
+  z-index: 9;
+  position: absolute;
+  width: 16px;
+  height: 100%;
+  top: 0px;
+  right: 0px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.scroll-area {
+  position: absolute;
+  width: 20%;
+  min-width: 16px;
+  height: 100%;
+  top: 0px;
+  right: 0px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.-no-transition {
+  transition: none;
+}
+
+.scroll-bar.-active {
+  background-color: rgba(218, 218, 218, 0.8);
+}
+
+.scroll-area:hover .scroll-bar {
+  background-color: rgba(218, 218, 218, 0.8);
+} 
+
+.scroll-area:hover .scroll-bar:hover {
+  background-color: rgba(240, 240, 240, 1);
+}
+
+.scroll-area:hover .scroll-bar.-hover {
+  background-color: rgba(240, 240, 240, 1);
+}
